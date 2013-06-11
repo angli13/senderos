@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>   
+<body>
+
+<div id="galeriaPage" data-role="page" data-add-back-btn="true" title="atras" lang="es"  data-back-btn-text="Atras">
+
+	<div data-role="header">
+		<h1>Galeria</h1>
+	</div>
+
+  <div data-role="content"> 
+        <style>
+
+            /* Demo styles */
+            html,body{background:#222;margin:0;}
+            body{border-top:4px solid #000;}
+            .content{color:#777;font:12px/1.4 "helvetica neue",arial,sans-serif;width:620px;margin:20px auto;}
+            h1{font-size:12px;font-weight:normal;color:#ddd;margin:0;}
+            p{margin:0 0 20px}
+            a {color:#22BCB9;text-decoration:none;}
+            .cred{margin-top:20px;font-size:11px;}
+
+            /* This rule is read by Galleria to define the gallery height: */
+            #galleria{height:320px;}
+
+        </style>
+
+<body>
+    <div class="content">
+        <h1>Galleria Flickr Plugin Demo</h1>
+        <p>Demonstrating a basic gallery example with a Flickr search.</p>
+
+        <!-- Adding gallery images. This is just a container for the dynamic flickr images -->
+
+        <div id="galleria">
+        </div>
+
+        <p class="cred">Made by <a href="http://galleria.aino.se">Galleria</a>.</p>
+        <a href="#" id="close">cloase</a>
+    </div>
+             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="../../galleria/galleria-1.2.9.min.js"></script>
+        <script src="../../galleria/plugins/flickr/galleria.flickr.min.js"></script>
+    <script>
+
+    // Load the classic theme
+    Galleria.loadTheme('../../galleria/themes/classic/galleria.classic.min.js');
+
+    // Initialize Galleria
+    Galleria.run('#galleria', {
+
+        // search flickr for "galleria"
+        flickr: 'set:72157633217946174',
+        
+    });
+    </script>
+    </body>
+</html>

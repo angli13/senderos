@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+    
+<body>
+
+<div id="detailsPage" data-role="page" data-add-back-btn="true" title="atras" lang="es"  data-back-btn-text="Atras">
+    <div data-role="popup" class="ui-content" id="desc"></div>
+    <div data-role="popup" id="dir" class="ui-content"></div>
+    <div data-role="popup" id="horario" class="ui-content"></div>
+    <div data-role="popup" id="poptarjeta" class="ui-content">Aceptamos tarjetas de crédito y débito.</div>
+    <div data-role="popup" id="popdomicilio" class="ui-content">Contamos con servicio a domicilio.</div>
+	<div data-role="header" data-theme="c">
+		<h1 class="fontface" id="headerCliente"></h1>
+	</div>
+
+  <div data-role="content"> 
+  <div>
+  	<h3 id="clienteNombre" style="color:#FFF; text-shadow: 0.1em 0.1em 0.2em black;"></h3>
+	<div id="logo" >
+  	<img id="clienteLogo"/></div>
+	<div id="clienteDetalles">
+       <p></p>
+       <p id="clienteSlogan" style="font-style:italic; color:#FFF; text-shadow: 0.1em 0.1em 0.2em black;"></p>
+       <a id="clienteHorario" style="font-style:italic; color:#FFF; text-shadow: 0.1em 0.1em 0.2em black;"></a>
+       <div id="iconitos"></div>
+       <!--<p id="clienteDesc"></p>-->
+       <!--<p id="clienteDir"></p>-->
+       </div>
+   	</div>
+	 
+    <ul id="actionList" data-role="listview" data-inset="true">
+    </ul>
+</div>
+
+</body>
+
+</html>

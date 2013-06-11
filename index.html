@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Directorio Senderos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+<!--<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />-->
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/type/stylesheet.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="css/type/fuentes.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body>
+<img src="pics/fondo.png" id="bg" alt="">
+<img src="pics/logo.png" alt=""  id="logosenderos" class="logoinicio">
+<div data-role="page" id="page" >
+<!--	<div data-role="header">
+		<h1 class="fontface">Senderos</h1>
+	</div>-->
+	<div data-role="content">	
+    <div id="espacio"></div>
+		<ul data-role="listview" data-inset="true" data-theme="d" class="general">
+			<li ><a href="directorio.html" class="style3">Directorio</a></li>
+            <li><a href="directorio.html" class="style3">Noticias</a></li>
+			<li><a href="directorio.html" class="style3">Contacto</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="c" >
+		<h4 style="white-space:normal" class="stylefooter">BlackBear Apps</h4>
+	</div> 
+</div> 
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/jquery.js"></script>
+<script src="js/espanol.js"></script>
+<!--<script src="js/jquery.mobile-1.0rc1.min.js"></script>-->
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<script src="js/jquery.ui.map.js"></script>
+<script language="JavaScript">
+var img = document.getElementById('bg'); 
+//or however you get a handle to the IMG
+var height = img.clientHeight;
+$('#espacio').css({ 'height': height*0.42});
+</script>
+<script src="js/movimiento.js"></script>
+<!--<script language="JavaScript">
+var img = document.getElementById('bg'); 
+var logo = document.getElementById('logosenderos'); 
+//or however you get a handle to the IMG
+var height = img.clientHeight;
+var width = img.clientWidth;
+$('#logosenderos').addClass('posicion');
+$('#logosenderos').removeClass('logoinicio');
+</script>-->
+<script src="js/listaclientes.js" ></script>
+<script src="js/detallescliente.js"></script>
+<script src="js/crearmapa.js"></script>
+</body>
+
+</html>
