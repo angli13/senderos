@@ -18,7 +18,7 @@ function getClientesLista() {
 		$('#clientesLista li').remove();
 		clientes = data.items;
 		$.each(clientes, function(index, cliente) {
-			$('#clientesLista').append('<li><a href="detallescliente.html?id=' + cliente.ID + '">' +
+			$('#clientesLista').append('<li data-filtertext="' + cliente.KEYWORDS + '"><a href="detallescliente.html?id=' + cliente.ID + '">' +
 					'<img  id="clogo" src="http://blackbearapps.net63.net/senderos/directorio/pics/' + cliente.LOGO + '"/>' +
 					'<h4 class="grande">'+cliente.NOMBRE+'</h4>' +
 					'<p class="fontface">' + encode_utf8(cliente.SLOGAN) + '</p>' +

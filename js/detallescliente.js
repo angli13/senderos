@@ -44,7 +44,7 @@ function mostrarCliente(data) {
 				'<p>' + cliente.TELEFONO + '</p></a></li>');
 	}
 		if (cliente.PAGINA) {
-		$('#actionList').append('<li><a rel="external" href="'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
+		$('#actionList').append('<li><a rel="external" href="http://'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
 				'<p>' + cliente.PAGINA + '</p></a></li>');
 	}
 	
