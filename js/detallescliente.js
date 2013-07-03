@@ -44,17 +44,29 @@ function mostrarCliente(data) {
 				'<p>' + cliente.TELEFONO + '</p></a></li>');
 	}
 		if (cliente.PAGINA) {
-		$('#actionList').append('<li><a target="_system" rel="external" href="http://'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
+		$('#actionList').append('<li><a id="listaweb"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
 				'<p>' + cliente.PAGINA + '</p></a></li>');
-	}
+				web=('http://'+cliente.PAGINA);
+		 $("#listaweb").click(function(e) {
+			window.open(web, '_system', 'location=yes'); 
+		 });
+		}
 	
 	if (cliente.FACEBOOK) {
-		$('#actionList').append('<li><a target="_system" rel="external" href="http://www.facebook.com/'+cliente.FACEBOOK+'"><div id="facebook"><img src="pics/iconos/facebook.png"/></div><h3>Facebook</h3>' +
+		$('#actionList').append('<li><a id="listafacebook"><div id="facebook"><img src="pics/iconos/facebook.png"/></div><h3>Facebook</h3>' +
 				'<p>' + cliente.FACEBOOK + '</p></a></li>');
+				facebook=('http://www.facebook.com/'+cliente.FACEBOOK);
+		 $("#listafacebook").click(function(e) {
+			window.open(facebook, '_system', 'location=yes'); 
+		 });
 	}
 	if (cliente.TWITTER) {
-		$('#actionList').append('<li><a target="_system" href="http://www.twitter.com/'+cliente.TWITTER+'"><div id="twitter"><img src="pics/iconos/twitter.png"/></div><h3>Twitter</h3>' +
+		$('#actionList').append('<li><a id="listatwitter"><div id="twitter"><img src="pics/iconos/twitter.png"/></div><h3>Twitter</h3>' +
 				'<p>' + cliente.TWITTER + '</p></a></li>');
+				twitter=('http://www.twitter.com/'+cliente.TWITTER);
+		 $("#listatwitter").click(function(e) {
+			window.open(twitter, '_system', 'location=yes'); 
+		 });
 	}
 		if (cliente.EMAIL) {
 		$('#actionList').append('<li><a rel="external" href="mailto:'+cliente.EMAIL+'"><div id="email"><img src="pics/iconos/email.png"/></div><h3>Email</h3>' +
@@ -70,6 +82,10 @@ function mostrarCliente(data) {
 	$('#actionList').listview('refresh');
 	
 }
+function linksenventana() {
+	
+}
+
 
 function getUrlVars() {
     var vars = [], hash;
