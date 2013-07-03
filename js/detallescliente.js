@@ -44,16 +44,16 @@ function mostrarCliente(data) {
 				'<p>' + cliente.TELEFONO + '</p></a></li>');
 	}
 		if (cliente.PAGINA) {
-		$('#actionList').append('<li><a rel="external" href="http://'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
+		$('#actionList').append('<li><a target="_blank" rel="external" href="http://'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
 				'<p>' + cliente.PAGINA + '</p></a></li>');
 	}
 	
 	if (cliente.FACEBOOK) {
-		$('#actionList').append('<li><a rel="external" href="http://www.facebook.com/'+cliente.FACEBOOK+'"><div id="facebook"><img src="pics/iconos/facebook.png"/></div><h3>Facebook</h3>' +
+		$('#actionList').append('<li><a target="_blank" rel="external" href="http://www.facebook.com/'+cliente.FACEBOOK+'"><div id="facebook"><img src="pics/iconos/facebook.png"/></div><h3>Facebook</h3>' +
 				'<p>' + cliente.FACEBOOK + '</p></a></li>');
 	}
 	if (cliente.TWITTER) {
-		$('#actionList').append('<li><a rel="external" href="http://www.twitter.com/'+cliente.TWITTER+'"><div id="twitter"><img src="pics/iconos/twitter.png"/></div><h3>Twitter</h3>' +
+		$('#actionList').append('<li><a target="_blank" rel="external" href="http://www.twitter.com/'+cliente.TWITTER+'"><div id="twitter"><img src="pics/iconos/twitter.png"/></div><h3>Twitter</h3>' +
 				'<p>' + cliente.TWITTER + '</p></a></li>');
 	}
 		if (cliente.EMAIL) {
