@@ -44,33 +44,17 @@ function mostrarCliente(data) {
 				'<p>' + cliente.TELEFONO + '</p></a></li>');
 	}
 		if (cliente.PAGINA) {
-		$('#actionList').append('<li><a id="listaweb" rel="http://'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
+		$('#actionList').append('<li><a id="listaweb" class="listado" rel="http://'+cliente.PAGINA+'"><div id="web"><img src="pics/iconos/web.png"/></div><h3>Página Web</h3>' +
 				'<p>' + cliente.PAGINA + '</p></a></li>');
-				
-		$('#listaweb').live('tap', function() {
-   		url = $(this).attr("rel");   
-    	loadURL(url);
-		});
 		}
 	
 	if (cliente.FACEBOOK) {
-		$('#actionList').append('<li><a id="listafacebook" rel="http://www.facebook.com/'+cliente.FACEBOOK+'"><div id="facebook"><img src="pics/iconos/facebook.png"/></div><h3>Facebook</h3>' +
+		$('#actionList').append('<li><a id="listafacebook" class="listado" rel="http://www.facebook.com/'+cliente.FACEBOOK+'"><div id="facebook"><img src="pics/iconos/facebook.png"/></div><h3>Facebook</h3>' +
 				'<p>' + cliente.FACEBOOK + '</p></a></li>');
-
-		$('#listafacebook').live('tap', function() {
-   		url = $(this).attr("rel");   
-    	loadURL(url);
-		});
-
 	}
 	if (cliente.TWITTER) {
-		$('#actionList').append('<li><a id="listatwitter"><div id="twitter" rel="http://www.twitter.com/'+cliente.TWITTER+'"><img src="pics/iconos/twitter.png"/></div><h3>Twitter</h3>' +
+		$('#actionList').append('<li><a id="listatwitter" rel="http://www.twitter.com/'+cliente.TWITTER+'" class="listado"><div id="twitter"><img src="pics/iconos/twitter.png"/></div><h3>Twitter</h3>' +
 				'<p>' + cliente.TWITTER + '</p></a></li>');
-
-		$('#listatwitter').live('tap', function() {
-   		url = $(this).attr("rel");   
-    	loadURL(url);
-		});
 	}
 		if (cliente.EMAIL) {
 		$('#actionList').append('<li><a rel="external" href="mailto:'+cliente.EMAIL+'"><div id="email"><img src="pics/iconos/email.png"/></div><h3>Email</h3>' +
@@ -86,6 +70,11 @@ function mostrarCliente(data) {
 	$('#actionList').listview('refresh');
 	
 }
+
+		$('.listado').live('tap', function() {
+   		url = $(this).attr("rel");   
+    	loadURL(url);
+		});
 
 function loadURL(url){
     navigator.app.loadUrl(url, { openExternal:true });
