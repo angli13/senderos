@@ -1,6 +1,10 @@
 $('#detailsPage').live('pageshow', function(event) {
 	var id = getUrlVars()['id'];
 	$.getJSON(serviceURL + 'getcliente.php?id='+id, mostrarCliente);
+			$('.listado').live('tap', function() {
+   		url = $(this).attr("rel");   
+    	loadURL(url);
+		});
 });
 
 function mostrarCliente(data) {
@@ -71,10 +75,7 @@ function mostrarCliente(data) {
 	
 }
 
-		$('.listado').live('tap', function() {
-   		url = $(this).attr("rel");   
-    	loadURL(url);
-		});
+
 
 function loadURL(url){
     navigator.app.loadUrl(url, { openExternal:true });
