@@ -50,6 +50,8 @@ permission on your app, which PhoneGap requires.
 <gap:plugin name="Example" />
 A list of available plugins are available at https://build.phonegap.com/docs/plugins
 -->
+	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<access origin="*" browserOnly="true" />
 
     <!--
 Define access to external domains.
